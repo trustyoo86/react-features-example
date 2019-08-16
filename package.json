@@ -1,0 +1,30 @@
+{
+  "name": "react-features-example",
+  "version": "0.0.1",
+  "description": "react features example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trustyoo86/react-features-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trustyoo86/react-features-example/issues"
+  },
+  "homepage": "https://github.com/trustyoo86/react-features-example#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "path": "^0.12.7",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1"
+  }
+}
