@@ -1,11 +1,26 @@
 'use strict';
 
-import reactDOM from 'react-dom';
+import React, { Profiler } from 'react';
+import ReactDOM from 'react-dom';
 
 const App = () => {
+  const onRenderCallback = (component, action, time) => {
+    console.log(`
+      ==================
+      component ====> ${component}
+      action    ====> ${action}
+      time      ====> ${time}
+      ==================
+    `);
+    console.log('component ==>', component);
+    console.log('time ===')
+  };
+
   return (
-    <p>Hello world!</p>
+    <Profiler id='test' onRender={onRenderCallback}>
+      <p>Hello world!</p>
+    </Profiler>
   );
 };
 
-reactDOM.render(<App />, documents.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
