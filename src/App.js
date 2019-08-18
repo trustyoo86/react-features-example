@@ -2,6 +2,12 @@
 
 import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './Routes';
+
+// components
+import Layout from 'components/layout';
+
+import 'antd/dist/antd.css';
 
 const App = () => {
   const onRenderCallback = (component, action, time) => {
@@ -18,7 +24,9 @@ const App = () => {
 
   return (
     <Profiler id='test' onRender={onRenderCallback}>
-      <p>Hello world!</p>
+      <Layout isHeader={false}>
+        <Routes />
+      </Layout>
     </Profiler>
   );
 };
