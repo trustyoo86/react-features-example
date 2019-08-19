@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { Profiler } from 'react';
+import React, { Profiler, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
 
@@ -10,21 +10,18 @@ import Layout from 'components/layout';
 import 'antd/dist/antd.css';
 
 const App = () => {
+  const [ profile, setProfile ] = useState({});
   const onRenderCallback = (component, action, time) => {
-    console.log(`
-      ==================
-      component ====> ${component}
-      action    ====> ${action}
-      time      ====> ${time}
-      ==================
-    `);
-    console.log('component ==>', component);
-    console.log('time ===')
+    // setProfile({
+    //   component,
+    //   action,
+    //   time,
+    // });
   };
 
   return (
     <Profiler id='test' onRender={onRenderCallback}>
-      <Layout isHeader={false}>
+      <Layout isHeader={false} profile={profile}>
         <Routes />
       </Layout>
     </Profiler>

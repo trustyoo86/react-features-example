@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 
 const { Header, Footer, Content } = Layout;
 
+// components
+// import Profiler from './Profiler';
+
 const styles = {
   container: {
     backgroundColor: '#ffffff',
@@ -25,13 +28,13 @@ const PageLayout = (props) => {
         }
         <Content style={styles.container}>
           <Row>
-            <Col span={4}></Col>
+            <Col span={4} />
             <Col span={16}>
               {
                 props.children
               }  
             </Col>
-            <Col span={4}></Col>
+            <Col span={4} />
           </Row>
         </Content>
         {

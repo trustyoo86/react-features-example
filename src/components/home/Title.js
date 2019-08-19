@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Typography, Divider } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -24,6 +25,7 @@ const HomeTitle = () => {
         React features example code
         {name}
         <input type='text' onChange={onChangeName} />
+        <Link to='/version/16_8'>Version 16.8</Link>
       </Paragraph>
     </div>
   );
