@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { Profiler } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
 
@@ -10,25 +10,15 @@ import Layout from 'components/layout';
 import 'antd/dist/antd.css';
 
 const App = () => {
-  const onRenderCallback = (component, action, time) => {
-    console.log(`
-      ==================
-      component ====> ${component}
-      action    ====> ${action}
-      time      ====> ${time}
-      ==================
-    `);
-    console.log('component ==>', component);
-    console.log('time ===')
-  };
-
   return (
-    <Profiler id='test' onRender={onRenderCallback}>
-      <Layout isHeader={false}>
-        <Routes />
-      </Layout>
-    </Profiler>
+    <Layout isHeader={false}>
+      <Routes />
+    </Layout>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.Fragment>
+    <App />
+  </React.Fragment>,
+  document.getElementById('root'));
