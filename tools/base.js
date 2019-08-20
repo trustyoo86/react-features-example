@@ -9,7 +9,6 @@ module.exports = {
     'vendor': ['react', 'react-dom'],
     'main': resolve(SRC_PATH, 'App.js'),
   },
-  
   module: {
     rules: [
       {
@@ -29,8 +28,8 @@ module.exports = {
           {
             loader: 'css-loader',
           },
-        ]
-      }
+        ],
+      },
     ],
   },
   
@@ -39,7 +38,7 @@ module.exports = {
       'components': resolve(SRC_PATH, 'components'),
       'containers': resolve(SRC_PATH, 'containers'),
       'style': resolve(SRC_PATH, 'style'),
-    }
+    },
   },
 
   plugins: [
@@ -47,5 +46,5 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-  ]
+  ],
 };

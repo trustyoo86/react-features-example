@@ -32,7 +32,7 @@ const PageLayout = (props) => {
             <Col span={16}>
               {
                 props.children
-              }  
+              }
             </Col>
             <Col span={4} />
           </Row>

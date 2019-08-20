@@ -1,32 +1,30 @@
 'use strict';
 
 import React, { useEffect, useState } from 'react';
-import { Typography, Divider } from 'antd';
-import { Link } from 'react-router-dom';
+import { Typography, Card, Anchor } from 'antd';
 
-const { Title, Paragraph, Text } = Typography;
+const { Title, Paragraph } = Typography;
+const { Link } = Anchor;
+
+const styles = {
+  container: {
+    paddingBottom: 30,
+  },
+};
 
 const HomeTitle = () => {
-  const [ name, setName ] = useState('');
-
-  const onChangeName = e => {
-    setName(e.target.value);
-  };
-  
-  useEffect(() => {
-    console.log('렌더링이 완료되었습니다.');
-    console.log('name ===>', name);
-  });
-
   return (
-    <div>
+    <div style={styles.container}>
       <Title>Introduction</Title>
       <Paragraph>
         React features example code
-        {name}
-        <input type='text' onChange={onChangeName} />
-        <Link to='/version/16_8'>Version 16.8</Link>
       </Paragraph>
+      <Card>
+        <Anchor>
+          <Link href='/#/version/16_8' title='Version 16.8 Features' />
+          <Link href='/#/version/16_9' title='Version 16.9 Features' />
+        </Anchor>
+      </Card>
     </div>
   );
 };
